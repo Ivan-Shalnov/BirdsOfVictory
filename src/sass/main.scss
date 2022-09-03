@@ -1,0 +1,20 @@
+// BootStrap
+// @import './node_modules/bootstrap/scss/bootstrap-grid.scss';
+
+// RESET CSS
+@import 'utils/reset';
+
+// GLOBAL
+@import 'global/vars';
+@import 'global/common';
+
+// COMPONENTS
+@import 'components/container';
+@import 'components/logo';
+@import 'components/language-picker';
+@import 'components/donate-btn';
+@import 'components/main-nav';
+
+// BLOCKS
+@import 'blocks/header.scss';
+@import 'blocks/menu-mobile.scss';

@@ -1,0 +1,34 @@
+{
+  "name": "birdsofvictory",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ivan-Shalnov/BirdsOfVictory.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ivan-Shalnov/BirdsOfVictory/issues"
+  },
+  "homepage": "https://github.com/Ivan-Shalnov/BirdsOfVictory",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /BirdsOfVictory/",
+    "prod": "parcel build src/*.html"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "buffer": "^6.0.3",
+    "parcel": "^2.7.0",
+    "parcel-packager-svg-sprite": "^2.0.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "parcel-transformer-svg-sprite": "^2.0.0",
+    "posthtml-include": "^1.7.4",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.0"
+  }
+}

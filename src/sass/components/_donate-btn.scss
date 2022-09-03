@@ -1,0 +1,9 @@
+.donate-btn {
+  display: inline-block;
+  background-color: $yellow;
+  padding: 10px;
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,27 @@
+.language-picker {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    color: inherit;
+  }
+  &__current {
+    padding-left: 0.35em;
+    padding-right: 0.35em;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+  &__list {
+    padding-left: 0.35em;
+    display: none;
+    position: absolute;
+    top: 100%;
+  }
+}

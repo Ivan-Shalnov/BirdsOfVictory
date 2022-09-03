@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "@parcel/config-default"
+  ],
+  "reporters": [
+    "...",
+    "parcel-reporter-clean-dist"
+  ],
+  "transformers": {
+    "src/images/icons/*.svg": [
+      "parcel-transformer-svg-sprite"
+    ]
+  },
+  "packagers": {
+    "*.html": "parcel-packager-svg-sprite"
+  }
+}

@@ -1,0 +1,21 @@
+.main-nav {
+  display: none;
+}
+@media (min-width: $desktop) {
+  .main-nav {
+    display: block;
+    &__list {
+      display: flex;
+    }
+    &__link {
+      display: block;
+      padding: 30px;
+      font-size: 14px;
+      line-height: 140%;
+      letter-spacing: 0.03em;
+      color: #ffffff;
+
+      opacity: 0.7;
+    }
+  }
+}

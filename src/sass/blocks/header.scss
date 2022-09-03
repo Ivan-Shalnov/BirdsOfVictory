@@ -1,0 +1,14 @@
+.header {
+  background-color: $black;
+  padding: 10px 0;
+  & > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+}
