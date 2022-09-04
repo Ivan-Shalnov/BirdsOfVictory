@@ -16,4 +16,8 @@ svg {
 body {
   font-family: 'HelveticaNeueCyr';
   color: $black;
+  padding-top: 70px;
+  @media (min-width: 768px) {
+    padding-top: 80px;
+  }
 }

@@ -12,5 +12,4 @@ const swiper = new Swiper('.swiper', {
   //     prevEl: '.swiper__btn-prev',
   //     disabledClass: 'swiper__btn-disabled',
   //   },
-  spaceBetween: 15,
 });
