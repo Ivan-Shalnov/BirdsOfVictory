@@ -12,3 +12,14 @@
     align-items: center;
   }
 }
+@media (min-width: $desktop) {
+  .header {
+    background-color: transparent;
+    & > .container {
+      background-color: $black;
+    }
+    &__menu-btn{
+      display: none;
+    }
+  }
+}

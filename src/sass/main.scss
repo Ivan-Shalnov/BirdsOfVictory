@@ -7,6 +7,7 @@
 // GLOBAL
 @import 'global/vars';
 @import 'global/common';
+@import 'global/fonts';
 
 // COMPONENTS
 @import 'components/container';
@@ -14,7 +15,12 @@
 @import 'components/language-picker';
 @import 'components/donate-btn';
 @import 'components/main-nav';
+@import 'components/section';
 
 // BLOCKS
 @import 'blocks/header.scss';
 @import 'blocks/menu-mobile.scss';
+@import 'blocks/hero.scss';
+@import 'blocks/advantages.scss';
+@import 'blocks/donate.scss';
+@import 'blocks/our-drones.scss';

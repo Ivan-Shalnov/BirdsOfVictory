@@ -1,9 +1,33 @@
 .donate-btn {
-  display: inline-block;
+  display: flex;
   background-color: $yellow;
   padding: 10px;
+
   &__icon {
     width: 30px;
     height: 30px;
+    vertical-align: middle;
+  }
+  &__text {
+    display: none;
+    flex-grow: 1;
+    font-family: 'Blender Pro';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $black;
+    vertical-align: middle;
+  }
+  &.donate-btn--show-text {
+    .donate-btn__text {
+      display: block;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .donate-btn {
+    padding: 15px;
   }
 }

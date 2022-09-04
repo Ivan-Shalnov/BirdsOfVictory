@@ -1,0 +1,121 @@
+.advantages {
+  padding: 60px 0;
+  &__text-wrap {
+    margin-bottom: 20px;
+  }
+  &__subtitle {
+    margin-bottom: 10px;
+  }
+  &__title {
+    max-width: 200px;
+    font-family: 'HelveticaNeueCyr';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+
+    color: $black;
+  }
+}
+
+.advantages-list {
+  counter-reset: advantages;
+
+  &__item {
+    position: relative;
+    padding: 15px;
+    &::before {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      counter-increment: advantages;
+      content: '0' counter(advantages);
+      font-family: 'Blender Pro';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 125%;
+      /* identical to box height, or 20px */
+
+      /* Black */
+
+      color: $black;
+      background-color: $white;
+    }
+    &:not(:last-child) {
+      @media (max-width: $desktop) {
+        margin-bottom: 35px;
+      }
+    }
+  }
+  &__item-special {
+    color: $white;
+    background-color: $black;
+  }
+  &__icon {
+    margin-bottom: 30px;
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+  &__title {
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 155%;
+  }
+  &__text {
+    max-width: 270px;
+    font-size: 14px;
+    line-height: 140%;
+    /* or 20px */
+
+    letter-spacing: 0.03em;
+
+    opacity: 0.75;
+  }
+}
+@media (min-width: $desktop) {
+  .advantages {
+    padding: 160px 0;
+    & > .container {
+      position: relative;
+    }
+    &__text-wrap {
+      position: absolute;
+    }
+    &__subtitle {
+      margin-bottom: 5px;
+    }
+    &__title {
+      max-width: 470px;
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: auto;
+      row-gap: 60px;
+      column-gap: 30px;
+    }
+    &-list__item {
+      grid-column: span 2;
+      &:first-child {
+        grid-column: 4 / span 3;
+      }
+    }
+  }
+  .advantages-list {
+    &__item {
+      padding: 30px;
+      &::before {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}

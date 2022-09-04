@@ -7,7 +7,7 @@
   @media (min-width: $tablet) {
     max-width: $tablet;
   }
-  @media (min-width: $desktop) {
-    max-width: $desktop;
+  @media (min-width: 1200px) {
+    max-width: 62.5%;
   }
 }
