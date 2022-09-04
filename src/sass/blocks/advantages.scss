@@ -80,6 +80,17 @@
     opacity: 0.75;
   }
 }
+@media (min-width: $tablet) {
+  .advantages {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      row-gap: 60px;
+      column-gap: 30px;
+    }
+  }
+}
 @media (min-width: $desktop) {
   .advantages {
     padding: 160px 0;

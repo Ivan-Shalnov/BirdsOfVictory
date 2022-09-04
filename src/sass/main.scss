@@ -10,6 +10,7 @@
 @import 'global/fonts';
 
 // COMPONENTS
+@import 'components/visually-hidden';
 @import 'components/container';
 @import 'components/logo';
 @import 'components/language-picker';
@@ -24,3 +25,5 @@
 @import 'blocks/advantages.scss';
 @import 'blocks/donate.scss';
 @import 'blocks/our-drones.scss';
+@import 'blocks/statistics.scss';
+@import 'blocks/footer.scss';

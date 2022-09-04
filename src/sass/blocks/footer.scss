@@ -1,0 +1,75 @@
+.footer {
+  & > .container {
+    padding: 0;
+  }
+  &__logo {
+    display: none;
+  }
+}
+.contacts {
+  padding: 30px 15px;
+  background: $lightGrey;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__icon {
+    margin-right: 10px;
+    vertical-align: middle;
+
+    width: 30px;
+    height: 30px;
+  }
+  &__link {
+    font-size: 14px;
+    line-height: 140%;
+    /* identical to box height, or 20px */
+
+    letter-spacing: 0.03em;
+    color: $black;
+  }
+}
+.copyrights {
+  padding-top: 30px;
+  padding-bottom: 15px;
+  background: $black;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  &__symbols {
+    display: flex;
+    gap: 10px;
+    & > svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &__links {
+    font-size: 12px;
+    line-height: 125%;
+    /* identical to box height, or 15px */
+
+    /* White */
+
+    color: $white;
+
+    opacity: 0.75;
+    & > a {
+      color: inherit;
+    }
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 125%;
+    /* identical to box height, or 15px */
+
+    /* White */
+
+    color: $white;
+
+    opacity: 0.75;
+  }
+}

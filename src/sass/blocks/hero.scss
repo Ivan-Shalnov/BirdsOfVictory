@@ -61,6 +61,18 @@
     opacity: 0.75;
   }
 }
+@media (min-width: 768px) {
+  @media (max-width: 1199px) {
+    .hero {
+      position: relative;
+      &__text-wrap {
+        position: absolute;
+        bottom: 60px;
+        max-width: 470px;
+      }
+    }
+  }
+}
 @media (min-width: $desktop) {
   .hero {
     padding: 90px 0;

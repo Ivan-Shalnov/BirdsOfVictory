@@ -6,27 +6,6 @@
   &__title {
     margin-bottom: 35px;
   }
-  &__slide-wrap {
-    position: relative;
-    .splide__arrows {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      position: absolute;
-      top: 250px;
-    }
-    .splide__arrow {
-      width: 50px;
-      height: 50px;
-      & > svg {
-        display: none;
-      }
-    }
-    .splide__arrow--next {
-      background: url('../images/arrow-right.svg') center center / 20px auto
-        no-repeat;
-    }
-  }
 }
 .drones-list {
   counter-reset: drones-list;
@@ -34,23 +13,22 @@
     counter-increment: drones-list;
   }
   &__img-wrap {
+    position: relative;
     margin-bottom: 30px;
-    padding-top: 16%;
+    padding-top: 86.66%;
+    width: 100%;
     background: url('../images/drones-list-bg-mob.svg') top left / contain
       no-repeat;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
   }
   &__img {
-    position: relative;
+    position: absolute;
     z-index: 2;
-    transform: translateX(15px);
+    right: -15px;
+    bottom: 0;
     width: 100%;
     max-width: none;
   }
   &__descr {
-    margin-bottom: 30px;
     position: relative;
     &::before {
       width: 60px;
@@ -123,6 +101,8 @@
     line-height: 150%;
   }
   &__btns-wrap {
+    margin-top: 30px;
+
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -146,5 +126,157 @@
 
     border-bottom: 2px solid $mainOlive;
     color: $white;
+  }
+}
+
+.swiper {
+  &__wrap {
+    position: relative;
+  }
+  &__controls {
+    padding-top: calc((100% - 30px) / 100 * 86.66);
+    width: calc(100% - 30px);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+  &__btns-wrap {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid $mainOlive;
+    cursor: pointer;
+    transition: 250ms;
+    & > svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &__btn-prev {
+    & > svg {
+      // transform-origin: 50% 50%;
+      transform: rotateZ(180deg);
+    }
+  }
+  &__btn-disabled {
+    opacity: 0.3;
+  }
+}
+@media (min-width: 375px) {
+  .swiper {
+    @media (max-width: 767px) {
+      &__controls {
+        padding-top: 299px;
+        width: 345px;
+      }
+    }
+  }
+}
+@media (min-width: $tablet) {
+  .swiper {
+    @media (max-width: 1199px) {
+      &__controls {
+        padding-top: 639.55px;
+        width: 738px;
+        max-width: $tablet;
+      }
+      &__btn {
+        width: 125px;
+        height: 125px;
+        & > svg {
+          transform: scale(3);
+        }
+      }
+      &__btn-prev {
+        & > svg {
+          transform: rotateZ(180deg) scale(3);
+        }
+      }
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .our-drones {
+    position: relative;
+    &__title {
+      margin-bottom: 60px;
+    }
+  }
+  .drones-list {
+    .container {
+      margin: 0;
+      max-width: none;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    &__descr {
+      &::before {
+        position: static;
+        margin-left: auto;
+      }
+    }
+    &__img-wrap {
+      position: relative;
+      margin-bottom: 0;
+      margin-right: 100px;
+      padding: 0;
+      width: 670px;
+      &::before {
+        display: block;
+        content: '';
+        padding-top: 86.56%;
+      }
+    }
+    &__img {
+      bottom: auto;
+      right: auto;
+      top: 50%;
+      left: 35px;
+      width: 109.55%;
+      transform: translateY(-50%);
+    }
+    &__descr {
+      flex-shrink: 2;
+      max-width: 370px;
+    }
+    &__price {
+      font-size: 80px;
+    }
+    &__btns-wrap {
+      margin-top: 60px;
+      justify-content: flex-start;
+    }
+  }
+  .swiper {
+    &__controls {
+      position: absolute;
+      width: min-content;
+      padding: 0;
+      top: -70px;
+      left: 81.25%;
+
+      transform: translate(-100%, -100%);
+    }
+    &__btns-wrap {
+      position: static;
+      display: inline-flex;
+      justify-content: flex-start;
+      gap: 15px;
+      width: auto;
+    }
   }
 }

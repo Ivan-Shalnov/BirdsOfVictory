@@ -3,6 +3,9 @@
   position: relative;
   background: url('../images/ua-flag-mob.png') right / auto 100% no-repeat,
     url('../images/donate-bg-mob.svg') no-repeat top left / cover;
+  &__spacer {
+    display: none;
+  }
   &__inner {
     padding: 15px;
     background: rgba(50, 50, 50, 0.7);
@@ -39,13 +42,15 @@
     & > .container {
       padding-top: 220px;
       padding-bottom: 90px;
+      padding-left: 30%;
       background: url('../images/ua-flag.png') top left / auto 100% no-repeat;
     }
+
     &__inner {
       padding: 0;
-
+      width: fit-content;
       margin-left: auto;
-      max-width: 39.166%;
+      max-width: 77.79%;
       background: none;
     }
     &__subtitle {

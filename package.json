@@ -27,6 +27,7 @@
     "posthtml-include": "^1.7.4"
   },
   "dependencies": {
-    "@splidejs/splide": "^4.0.13"
+    "@splidejs/splide": "^4.0.13",
+    "swiper": "^8.3.2"
   }
 }
