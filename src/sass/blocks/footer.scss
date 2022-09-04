@@ -14,6 +14,23 @@
     flex-direction: column;
     gap: 15px;
   }
+  &__item {
+    display: flex;
+    align-items: center;
+    ul {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      li:not(:last-child) {
+        &::after {
+          content: ';';
+          display: inline-block;
+          margin-left: -0.25em;
+        }
+      }
+    }
+  }
   &__icon {
     margin-right: 10px;
     vertical-align: middle;
@@ -58,8 +75,14 @@
     color: $white;
 
     opacity: 0.75;
+    transition: 0.4s;
     & > a {
       color: inherit;
+    }
+    a:hover {
+      &:hover {
+        opacity: 1;
+      }
     }
   }
   &__text {
@@ -75,7 +98,21 @@
     opacity: 0.75;
   }
 }
-@media (min-width: $tablet) {
+
+@media (max-width: 767px) {
+  .footer {
+    .donate-btn {
+      &__icon {
+        display: none;
+      }
+      &__text {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: $md) {
   .footer {
     &__inner {
       background-color: $black;
@@ -89,12 +126,18 @@
       display: block;
       width: 144px;
     }
+    .donate-btn {
+      &__text {
+        display: block;
+      }
+    }
   }
   .copyrights {
     padding: 30px 0;
     & > .container {
       flex-direction: row;
       justify-content: space-between;
+      gap: 0;
     }
     &__text {
       order: 1;
@@ -107,7 +150,7 @@
     }
   }
 }
-@media (min-width: $desktop) {
+@media (min-width: $lg) {
   .footer {
     position: relative;
     border-top: 2px solid $lightGrey;
@@ -121,16 +164,28 @@
     width: 100%;
     transform: translateY(-50%);
     &__list {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
       gap: 30px;
-      justify-content: center;
+      flex-direction: row;
+      justify-content: space-between;
       padding: 30px 25px;
       background-color: $lightGrey;
     }
-    &__icon {
-      margin-right: 0;
-      transform: scale(0.833);
+  }
+}
+
+@media (min-width: $md) and (max-width: $lg) {
+  .contacts {
+    &__list {
+    }
+  }
+}
+
+@media (min-width: $lg) and (max-width: $xl) {
+  .contacts {
+    &__item {
+      ul {
+        display: block;
+      }
     }
   }
 }
