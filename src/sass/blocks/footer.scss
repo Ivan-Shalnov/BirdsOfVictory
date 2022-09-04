@@ -1,13 +1,13 @@
 .footer {
-  & > .container {
-    padding: 0;
+  &__inner {
+    background-color: $yellow;
   }
   &__logo {
     display: none;
   }
 }
 .contacts {
-  padding: 30px 15px;
+  padding: 30px 0;
   background: $lightGrey;
   &__list {
     display: flex;
@@ -33,11 +33,13 @@
 .copyrights {
   padding-top: 30px;
   padding-bottom: 15px;
-  background: $black;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
+  background: rgba(50, 50, 50, 0.95);
+  & > .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
   &__symbols {
     display: flex;
     gap: 10px;
@@ -71,5 +73,64 @@
     color: $white;
 
     opacity: 0.75;
+  }
+}
+@media (min-width: $tablet) {
+  .footer {
+    &__inner {
+      background-color: $black;
+      padding: 40px 0px;
+      & > .container {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &__logo {
+      display: block;
+      width: 144px;
+    }
+  }
+  .copyrights {
+    padding: 30px 0;
+    & > .container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__text {
+      order: 1;
+    }
+    &__symbols {
+      order: 2;
+    }
+    &__links {
+      order: 3;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .footer {
+    position: relative;
+    border-top: 2px solid $lightGrey;
+    &__inner {
+      padding-top: 75px;
+    }
+  }
+  .contacts {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    transform: translateY(-50%);
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      justify-content: center;
+      padding: 30px 25px;
+      background-color: $lightGrey;
+    }
+    &__icon {
+      margin-right: 0;
+      transform: scale(0.833);
+    }
   }
 }
