@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <title>Document</title>
+  <link rel="stylesheet" href="sass/main.scss" />
+</head>
+
+<body>
+  <include src="html/sections/header.html"></include>
+
+  <section class="product">
+    <div class="container">
+      <div class="swiper gallery">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/dron-gallery-img-1.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/dron-gallery-img-1.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <h1 class="product__title">
+        Ударні БПЛА
+      </h1>
+
+      <div class="product__row">
+        <div class="product__col">
+          <div class="product__block">
+            <h2 class="product__block-title">
+              Опис
+            </h2>
+            <ul class="product__tags">
+              <li>Компактний</li>
+              <li>Швидкий</li>
+            </ul>
+            <p class="product__desc">
+              Здатний нести снаряди до 3 кг і вражати техніку точними ударами. Низька вартість дозволяє використовувати
+              ці БПЛА для багатьох поодиноких цілей, зберігаючи дорожчі пристрої для великих скупчень техніки.
+            </p>
+          </div>
+        </div>
+        <div class="product__col">
+          <div class="product__block">
+            <h2 class="product__block-title">
+              Характеристики (базові)
+            </h2>
+            <table class="product__table">
+              <tr>
+                <td>Камера</td>
+                <td>120г, 1080Р</td>
+                <td rowspan="5">30 000 грн</td>
+              </tr>
+              <tr>
+                <td>Дальність</td>
+                <td>4,5-5 км</td>
+
+              </tr>
+              <tr>
+                <td>Висота</td>
+                <td>1 км</td>
+
+              </tr>
+              <tr>
+                <td>Вага БЧ</td>
+                <td>300 г</td>
+
+              </tr>
+              <tr>
+                <td>Детонація</td>
+                <td>Зіткнення/Підрив</td>
+
+              </tr>
+            </table>
+          </div>
+          <div class="product__block">
+            <h2 class="product__block-title">
+              Опціонально
+            </h2>
+            <table class="product__table">
+              <tr>
+                <td>Теплова камера</td>
+                <td>10 х, 640т</td>
+                <td>20 000 грн</td>
+              </tr>
+              <tr>
+                <td>Стабілізатор</td>
+                <td>до 600г</td>
+                <td>3 200 грн</td>
+              </tr>
+              <tr>
+                <td>Стабілізатор</td>
+                <td>1 кг</td>
+                <td>8 000 грн</td>
+              </tr>
+              <tr>
+                <td>Камера для розвідки (зум, стабілізатор)</td>
+                <td>30 х, 1080р</td>
+                <td>72 000 грн</td>
+              </tr>
+            </table>
+          </div>
+          <div class="product__block">
+            <h2 class="product__block-title">
+              Обладнання керування
+            </h2>
+            <table class="product__table">
+              <tr>
+                <td>Базове</td>
+                <td>10 х, 640т</td>
+                <td>20 000 грн</td>
+              </tr>
+              <tr>
+                <td>Модуль дальності для відео-сигналу</td>
+                <td>до 600г</td>
+                <td>3 200 грн</td>
+              </tr>
+              <tr>
+                <td>Модуль дальності для сигналу-керування</td>
+                <td>1 кг</td>
+                <td>8 000 грн</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <include src="html/sections/footer.html"></include>
+
+  <script src="js/product.js" type="module"></script>
+</body>
+
+</html>
