@@ -28,6 +28,8 @@
   },
   "dependencies": {
     "@splidejs/splide": "^4.0.13",
+    "countup.js": "^2.3.2",
+    "locomotive-scroll": "^4.1.4",
     "swiper": "^8.3.2"
   }
 }
