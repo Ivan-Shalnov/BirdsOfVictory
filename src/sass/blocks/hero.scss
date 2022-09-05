@@ -2,7 +2,11 @@
   padding-top: 30px;
   padding-bottom: 60px;
   &__bg {
-    padding-top: 109%;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 109%;
+    }
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url('../images/hero-bg-mob.png');
@@ -61,34 +65,49 @@
     opacity: 0.75;
   }
 }
-@media (min-width: 768px) {
-  @media (max-width: 1199px) {
+@media (min-width: $md) {
+  @media (max-width: ($xl - 1)) {
     .hero {
       position: relative;
       &__text-wrap {
         position: absolute;
-        bottom: 60px;
+        bottom: 50px;
         max-width: 470px;
       }
     }
   }
 }
-@media (min-width: $desktop) {
+@media (min-width: $xl) {
   .hero {
     padding: 90px 0;
-    & > .container {
-      position: relative;
-    }
     &__bg {
-      padding-top: 41.66%;
+      &::before {
+        padding-top: 41.66%;
+      }
       background-image: url('../images/hero-bg.png');
       background-position: top 65% right;
       background-size: auto 135%;
+      max-width: 1920px;
+      margin-left: auto;
+      margin-right: auto;
     }
     &__text-wrap {
+      margin-top: -240px;
+    }
+    &__title {
       max-width: 430px;
-      position: absolute;
-      bottom: 30px;
+    }
+    &__text {
+      max-width: 430px;
+    }
+    @media (max-width: 1750px) {
+      .container {
+        max-width: none;
+      }
+      &__text-wrap {
+        width: 85%;
+        margin-left: auto;
+      }
     }
   }
 }
