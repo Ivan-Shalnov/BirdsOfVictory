@@ -1,4 +1,5 @@
-import { scroll } from './common';
+import LocomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/src/locomotive-scroll.scss';
 
 // import Swiper JS
 import Swiper, { Navigation } from 'swiper';
@@ -9,6 +10,11 @@ import 'swiper/swiper.min.css';
 import { CountUp } from 'countup.js';
 
 window.addEventListener('DOMContentLoaded', () => {
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+    smoothMobile: true,
+  });
   // COUNTUP STATISTICS
   let countersInts = [];
   {
@@ -18,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const finishValue = +element.textContent;
       const counter = new CountUp(element, finishValue, {
         startVal: 0,
-        duration: 5,
+        duration: 3,
         useEasing: true,
       });
       return counter;
@@ -54,4 +60,5 @@ window.addEventListener('DOMContentLoaded', () => {
       countersInts.forEach(counter => counter.start());
   });
   // SCROLL EVENTS
+  scroll.update();
 });
