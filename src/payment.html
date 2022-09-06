@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="sass/main.scss" />
+  </head>
+  <body>
+    <div class="noise" data-scroll-container>
+      <main>
+        <article>
+          <div class="container">
+            <a href="" class="payment-btn">Платіж карткою</a>
+            <a href="" class="payment-btn">Банка MONO</a>
+            <h2>Платежі з-за кордону та по Україні</h2>
+            <ul class="payment__types">
+              <li class="payment__type payment-type">
+                <h3 class="payment-type__title">Перекази по Україні</h3>
+                <div class="payment-type__details">
+                  <p>Birds of victory</p>
+                  <p>ЄДРПОУ 00000000</p>
+                  <p>Призначення платежу «Благодійна допомога»</p>
+                </div>
+                <ul>
+                  <li class="payment-type__account">
+                    <p class="payment-type__currency">Гривня</p>
+                    <div class="payment-type__acc-num"></div>
+                      UA00 000000 00000 00000000000000
+                    </div>
+                    <button class="payment-type__copy-btn">
+                      <img class="payment-type__copy-icon src="images/copy.svg"
+                      alt="">
+                    </button>
+                  </li>
+                  <li class="payment__type payment-type">
+                <h3 class="payment-type__title">Перекази з-за кордону</h3>
+                <ul>
+                  <li class="payment-type__account">
+                    <p class="payment-type__currency">SWIFT in US dollars (USD)</p>
+                    <p class="payment-type__beneficiar">BENEFICIARY: JSC CB "PRIVATBANK"</p>
+                    <div class="payment-type__acc-num">
+                      IBAN: <span>UA00 000000 00000 00000000000000</span>
+                    </div>
+                    <button class="payment-type__copy-btn">
+                      <img class="payment-type__copy-icon src="images/copy.svg"
+                      alt="">
+                    </button>
+                  </li>
+                  <li class="payment-type__account">
+                    <p class="payment-type__currency">SWIFT in euros (EUR)</p>
+                    <p class="payment-type__beneficiar">BENEFICIARY: JSC CB "PRIVATBANK"</p>
+                    <div class="payment-type__acc-num">
+                      IBAN: <span>UA00 000000 00000 00000000000000</span>
+                    </div>
+                    <button class="payment-type__copy-btn">
+                      <img class="payment-type__copy-icon src="images/copy.svg"
+                      alt="">
+                    </button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </main>
+    </div>
+    <script src="js/index.js" type="module"></script>
+  </body>
+</html>
