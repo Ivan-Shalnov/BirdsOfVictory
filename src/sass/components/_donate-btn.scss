@@ -1,15 +1,25 @@
 .donate-btn {
   display: flex;
+  align-items: center;
   background-color: $yellow;
-  padding: 10px;
-
+  height: 70px;
+  max-width: 245px;
+  &__icon-wrap {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 100%;
+    border-right: 2px solid $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &__icon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     vertical-align: middle;
   }
   &__text {
-    display: none;
+    padding: 0 35px;
     flex-grow: 1;
     font-family: 'Blender Pro';
     font-weight: 700;
@@ -20,14 +30,37 @@
     color: $black;
     vertical-align: middle;
   }
-  &.donate-btn--show-text {
+  &--only-icon {
+    .donate-btn__icon {
+      border-right: none;
+    }
     .donate-btn__text {
-      display: block;
+      display: none;
+    }
+  }
+  &--only-text {
+    .donate-btn__icon-wrap {
+      display: none;
+    }
+  }
+  &.donate-btn--big {
+    height: 70px;
+    .donate-btn__icon {
+      width: 40px;
+      height: 40px;
     }
   }
 }
-@media (min-width: $desktop) {
+@media (max-width: ($md - 1px)) {
   .donate-btn {
-    padding: 15px;
+    height: 50px;
+    &__icon-wrap {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    &__icon {
+      width: 30px;
+      height: 30px;
+    }
   }
 }

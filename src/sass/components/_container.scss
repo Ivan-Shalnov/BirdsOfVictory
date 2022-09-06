@@ -16,13 +16,17 @@ $sm: 576px;
 $md: 768px;
 $lg: 992px;
 $xl: 1230px;
+$beforeSm: 575px;
+$beforeMd: 767px;
+$beforeLg: 991px;
+$beforeXl: 1229px;
 .container {
   outline: 2px blue solid;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
   @media (min-width: $sm) {
-    max-width: 540px;
+    max-width: 546px;
   }
   @media (min-width: $md) {
     max-width: 720px;

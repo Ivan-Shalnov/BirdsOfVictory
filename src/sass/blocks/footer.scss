@@ -99,14 +99,15 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $beforeMd) {
   .footer {
     .donate-btn {
-      &__icon {
+      max-width: none;
+      &__icon-wrap {
         display: none;
       }
       &__text {
-        display: block;
+        display: inline-block;
       }
     }
   }
@@ -169,13 +170,6 @@
       justify-content: space-between;
       padding: 30px 25px;
       background-color: $lightGrey;
-    }
-  }
-}
-
-@media (min-width: $md) and (max-width: $lg) {
-  .contacts {
-    &__list {
     }
   }
 }

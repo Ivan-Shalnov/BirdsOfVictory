@@ -48,7 +48,7 @@
       background-color: $white;
     }
     &:not(:last-child) {
-      @media (max-width: $desktop) {
+      @media (max-width: $beforeMd) {
         margin-bottom: 35px;
       }
     }
@@ -80,7 +80,7 @@
     opacity: 0.75;
   }
 }
-@media (min-width: $tablet) {
+@media (min-width: $md) {
   .advantages {
     &__list {
       display: grid;

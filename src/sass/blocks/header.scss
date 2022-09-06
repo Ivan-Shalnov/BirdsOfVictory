@@ -17,6 +17,18 @@
     align-items: center;
   }
 }
+@media (max-width: ($beforeLg)) {
+  .header {
+    &__group {
+      .donate-btn__icon {
+        border-right: none;
+      }
+      .donate-btn__text {
+        display: none;
+      }
+    }
+  }
+}
 @media (min-width: $md) {
   .header {
     padding: 0;

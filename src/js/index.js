@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
       },
       spaceBetween: 15,
       breakpoints: {
-        1200: {
+        1230: {
           slidesPerView: 1.57,
           slidesOffsetBefore: containerOffset,
           slidesOffsetAfter: containerOffset,

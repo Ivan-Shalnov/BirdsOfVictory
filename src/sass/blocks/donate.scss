@@ -30,11 +30,24 @@
 
     color: $white;
   }
-  &__btn {
-    max-width: 195px;
+}
+@media (max-width: $beforeSm) {
+  .donate {
+    &__btn {
+      max-width: 195px;
+      .donate-btn {
+        &__icon-wrap {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        &__text {
+          padding: 0 20px;
+        }
+      }
+    }
   }
 }
-@media (min-width: $desktop) {
+@media (min-width: $xl) {
   .donate {
     padding: 0;
     background: url('../images/donate-bg.png') center center / auto 100%
@@ -61,9 +74,6 @@
     }
     &__text {
       margin-bottom: 35px;
-    }
-    &__btn {
-      max-width: 245px;
     }
   }
 }
