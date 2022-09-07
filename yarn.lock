@@ -709,11 +709,6 @@
     "chrome-trace-event" "^1.0.2"
     "nullthrows" "^1.1.1"
 
-"@splidejs/splide@^4.0.13":
-  "integrity" "sha512-smMwjXUiiPgz3ekwAlJF6dm4wBUKw3q16UJH4re4d04IfwQ06oOhXw7Q6XKkENi50tGvG7rtnxEXahB7Yq7HoA=="
-  "resolved" "https://registry.npmjs.org/@splidejs/splide/-/splide-4.0.13.tgz"
-  "version" "4.0.13"
-
 "@swc/helpers@^0.4.2":
   "integrity" "sha512-rEUrBSGIoSFuYxwBYtlUFMlE2CwGhmW+w9355/5oduSw8e5h2+Tj4UrAGNNgP9915++wj5vkQo0UuOBqOAq4nw=="
   "resolved" "https://registry.npmjs.org/@swc/helpers/-/helpers-0.4.11.tgz"
