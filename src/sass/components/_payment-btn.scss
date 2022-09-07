@@ -1,0 +1,36 @@
+.payment-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 20px;
+  font-family: 'Blender Pro';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: $black;
+  background-color: $mainOlive;
+  transition: 250ms ease-in-out;
+
+  &__icon {
+    stroke: currentColor;
+    width: 30px;
+    transition: 250ms ease-in-out;
+  }
+  &--accent {
+    color: $white;
+    background-color: $black;
+  }
+  &:hover {
+    transform: scale(1.1);
+    .payment-btn__icon {
+      transform: scale(2);
+    }
+  }
+}
+@media (min-width: $md) {
+  .payment-btn {
+    padding: 20px;
+    font-size: 20px;
+  }
+}

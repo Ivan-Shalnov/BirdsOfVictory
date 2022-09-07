@@ -1,0 +1,194 @@
+.payment {
+  padding: 30px 0;
+  &__links {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__title {
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+  }
+  &__types-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.payment-type {
+  border: 1px solid $black;
+  padding: 15px;
+  &__title {
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 155%;
+    /* identical to box height, or 25px */
+
+    /* Main Olive */
+
+    color: $mainOlive;
+  }
+  &__details {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.03em;
+
+    opacity: 0.75;
+  }
+  &__accounts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__account {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.03em;
+    opacity: 0.75;
+  }
+  &__currency {
+    font-weight: 700;
+    letter-spacing: normal;
+    opacity: 1;
+  }
+  &__copy-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+    .message {
+      opacity: 0;
+      width: 120px;
+      background-color: $black;
+      color: $white;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      transition: 250ms ease-in-out;
+      pointer-events: none;
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent $black transparent;
+      }
+    }
+    &.sucessfull .message {
+      opacity: 1;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__copy-icon {
+    width: 30px;
+  }
+}
+@media (min-width: $sm) {
+  .payment {
+    padding: 50px 0;
+    &__links {
+      flex-direction: row;
+      justify-content: center;
+      gap: 30px;
+    }
+    &__title {
+      font-size: 25px;
+    }
+    &__btn {
+      min-width: 230px;
+    }
+  }
+}
+@media (min-width: $md) {
+  .payment {
+    &__links {
+      margin-bottom: 90px;
+    }
+    &__title {
+      margin-bottom: 40px;
+      font-size: 30px;
+    }
+    &__btn {
+      min-width: 270px;
+    }
+    &__types-list {
+      gap: 30px;
+    }
+  }
+  .payment-type {
+    padding: 30px;
+    &__title {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+    &__details {
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 125%;
+    }
+    &__account {
+      gap: 15px;
+      font-size: 16px;
+    }
+    &__currency {
+      font-size: 14px;
+    }
+    &__copy-btn {
+      top: auto;
+      bottom: 0;
+    }
+  }
+}
+@media (min-width: $lg) {
+  .payment {
+    padding-bottom: 100px;
+    &__links {
+      justify-content: flex-start;
+      margin-bottom: 90px;
+    }
+    &__title {
+      font-size: 50px;
+    }
+    &__types-list {
+      justify-items: stretch;
+      align-items: flex-start;
+      flex-direction: row;
+    }
+    &__type {
+      width: 100%;
+    }
+  }
+}
+@media (min-width: $xl) {
+  .payment {
+    padding-top: 90px;
+    padding-bottom: 135px;
+    &__links {
+      gap: 30px;
+    }
+    &__title {
+      font-size: 60px;
+    }
+  }
+}
