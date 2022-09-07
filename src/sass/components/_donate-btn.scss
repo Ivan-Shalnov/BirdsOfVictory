@@ -17,6 +17,7 @@
     width: 40px;
     height: 40px;
     vertical-align: middle;
+    transition: 0.3s;
   }
   &__text {
     padding: 0 35px;
@@ -29,6 +30,7 @@
     text-transform: uppercase;
     color: $black;
     vertical-align: middle;
+    transition: 0.3s;
   }
   &--only-icon {
     .donate-btn__icon {
@@ -48,6 +50,16 @@
     .donate-btn__icon {
       width: 40px;
       height: 40px;
+    }
+  }
+  &:hover {
+    .donate-btn {
+      &__icon {
+        transform: rotateY(180deg);
+      }
+      &__text {
+        transform: scale(1.05);
+      }
     }
   }
 }

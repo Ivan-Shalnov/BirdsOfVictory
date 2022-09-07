@@ -1,6 +1,10 @@
 .hero {
   padding-top: 30px;
   padding-bottom: 60px;
+  .container {
+    position: relative;
+    z-index: 1;
+  }
   &__bg {
     &::before {
       content: '';
@@ -65,6 +69,22 @@
     opacity: 0.75;
   }
 }
+
+@media (min-width: 500px) and (max-width: $md) {
+  .hero {
+    &__bg {
+      max-width: 300px;
+      margin-left: auto;
+    }
+    &__text {
+      max-width: 50%;
+    }
+    .container {
+      margin-top: -200px;
+    }
+  }
+}
+
 @media (min-width: $md) {
   @media (max-width: ($xl - 1)) {
     .hero {
@@ -77,16 +97,16 @@
     }
   }
 }
-@media (min-width: $xl) {
+@media (min-width: $md) {
   .hero {
-    padding: 90px 0;
+    padding: 60px 0 60px;
     &__bg {
       &::before {
-        padding-top: 41.66%;
+        padding-top: 53.66%;
       }
       background-image: url('../images/hero-bg.png');
-      background-position: top 65% right;
-      background-size: auto 135%;
+      background-position: 71% 74%;
+      background-size: auto 127%;
       max-width: 1920px;
       margin-left: auto;
       margin-right: auto;
@@ -101,12 +121,31 @@
       max-width: 430px;
     }
     @media (max-width: 1750px) {
-      .container {
-        max-width: none;
-      }
       &__text-wrap {
         width: 85%;
         margin-left: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: $lg) {
+  .hero {
+    &__bg {
+      max-height: 525px;
+    }
+  }
+}
+
+@media (min-width: $xl) {
+  .hero {
+    padding: 90px 0;
+    &__bg {
+      background-position: top 65% right;
+      background-size: auto 135%;
+      max-height: 100%;
+      &::before {
+        padding-top: 41.66%;
       }
     }
   }

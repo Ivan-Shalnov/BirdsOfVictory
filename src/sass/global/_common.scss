@@ -17,6 +17,7 @@ body {
   font-family: 'HelveticaNeueCyr';
   color: $black;
   padding-top: 70px;
+  scroll-behavior: smooth;
   @media (min-width: 768px) {
     padding-top: 80px;
   }

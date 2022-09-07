@@ -1,24 +1,40 @@
 <header class="header" data-scroll-section>
   <div class="container">
-    <a href="./index.html"
-      ><img class="logo" src="./images/logo.svg" alt="Birds of Victory"
-    /></a>
+    <a href="./index.html"><img class="logo" src="./images/logo.svg" alt="Birds of Victory" /></a>
     <nav class="header__nav main-nav">
       <ul class="main-nav__list">
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Переваги</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Дрони</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" data-scroll-to href="#advantages">Переваги</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" data-scroll-to href="#drons">Дрони</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="payment.html">Оплата</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Контакти</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" data-scroll-to href="#footer">Контакти</a></li>
       </ul>
     </nav>
     <div class="header__group">
       <include src="html/components/language-picker.html"></include>
       <include src="html/components/donate-btn.html"></include>
-      <button class="header__menu-btn menu-mobile__btn" type="button">
+      <button class="header__menu-btn menu-mobile__btn" id="burger" type="button">
         <svg class="menu-mobile__btn-icon">
-    <use href="images/icons/menu-open.svg">
-  </svg>
+          <use href="images/icons/menu-open.svg">
+        </svg>
       </button>
     </div>
   </div>
 </header>
+
+<div class="mobile-menu">
+  <ul>
+    <li>
+      <a data-scroll-to class="scroll-to" href="#advantages">Переваги</a>
+    </li>
+    <li>
+      <a data-scroll-to class="scroll-to" href="#drons">Дрони</a>
+    </li>
+    <li>
+      <a href="">Оплата</a>
+    </li>
+    <li>
+      <a data-scroll-to class="scroll-to" href="#footer">Контакти</a>
+    </li>
+  </ul>
+  <include src="html/components/donate-btn.html"></include>
+</div>
