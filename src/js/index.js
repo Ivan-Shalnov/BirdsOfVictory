@@ -43,11 +43,23 @@ window.addEventListener('DOMContentLoaded', () => {
       },
       spaceBetween: 15,
       breakpoints: {
-        1230: {
-          slidesPerView: 1.57,
+        768: {
+          slidesPerView: 1.5,
+          spaceBetween: 100,
           slidesOffsetBefore: containerOffset,
           slidesOffsetAfter: containerOffset,
+        },
+        992: {
+          slidesPerView: 1.57,
           spaceBetween: 100,
+          slidesOffsetBefore: containerOffset,
+          slidesOffsetAfter: containerOffset,
+        },
+        1230: {
+          slidesPerView: 1.57,
+          spaceBetween: 100,
+          slidesOffsetBefore: containerOffset,
+          slidesOffsetAfter: containerOffset,
         },
       },
     });

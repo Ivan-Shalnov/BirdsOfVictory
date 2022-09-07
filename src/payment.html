@@ -1,149 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="sass/main.scss" />
-  </head>
-  <body>
-    <div data-scroll-container>
-      <include src="html/sections/header.html"></include>
 
-      <main>
-        <article class="payment" data-scroll-section>
-          <div class="container">
-            <ul class="payment__links">
-              <li>
-                <a href="" class="payment-btn payment__btn payment__btn--accent"
-                  >Платіж карткою
-                  <svg
-                    class="payment-btn__icon"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.75 8.75L20 20"
-                      stroke-width="2"
-                      stroke-linecap="square"
-                    />
-                    <path
-                      d="M21.25 8.75V21.25H8.75"
-                      stroke-width="2"
-                      stroke-linecap="square"
-                    /></svg
-                ></a>
-              </li>
-              <li>
-                <a href="" class="payment-btn payment__btn payment-btn--accent"
-                  >Банка MONO
-                  <svg
-                    class="payment-btn__icon"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.75 8.75L20 20"
-                      stroke-width="2"
-                      stroke-linecap="square"
-                    />
-                    <path
-                      d="M21.25 8.75V21.25H8.75"
-                      stroke-width="2"
-                      stroke-linecap="square"
-                    /></svg
-                ></a>
-              </li>
-            </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="sass/main.scss" />
+</head>
 
-            <h2 class="payment__title">Платежі з-за кордону та по Україні</h2>
-            <ul class="payment__types-list">
-              <li class="payment__type payment-type">
-                <h3 class="payment-type__title">Перекази по Україні</h3>
-                <div class="payment-type__details">
-                  <p>Birds of victory</p>
-                  <p>ЄДРПОУ 00000000</p>
-                  <p>Призначення платежу «Благодійна допомога»</p>
-                </div>
-                <ul class="payment-type__accounts-list">
-                  <li class="payment-type__account">
-                    <p class="payment-type__currency">Гривня</p>
-                    <p class="payment-type__acc-num">
-                      UA00 000000 00000 00000000000000
-                    </p>
-                    <button
-                      class="payment-type__copy-btn"
-                      data-clipboard-text="UA00 000000 00000 00000000000000"
-                    >
-                      <img
-                        class="payment-type__copy-icon"
-                        src="images/copy.svg"
-                        alt=""
-                      />
-                      <span class="message">Copied</span>
-                    </button>
-                  </li>
-                </ul>
-              </li>
-              <li class="payment__type payment-type">
-                <h3 class="payment-type__title">Перекази з-за кордону</h3>
-                <ul class="payment-type__accounts-list">
-                  <li class="payment-type__account">
-                    <p class="payment-type__currency">
-                      SWIFT in US dollars (USD)
-                    </p>
-                    <p class="payment-type__beneficiar">
-                      BENEFICIARY: JSC CB "PRIVATBANK"
-                    </p>
-                    <p class="payment-type__acc-num">
-                      IBAN: UA00 000000 00000 00000000000000
-                    </p>
-                    <button
-                      class="payment-type__copy-btn"
-                      data-clipboard-text="UA00 000000 00000 00000000000000"
-                    >
-                      <img
-                        class="payment-type__copy-icon"
-                        src="images/copy.svg"
-                        alt=""
-                      /><span class="message">Copied</span>
-                    </button>
-                  </li>
-                  <li class="payment-type__account">
-                    <p class="payment-type__currency">SWIFT in euros (EUR)</p>
-                    <p class="payment-type__beneficiar">
-                      BENEFICIARY: JSC CB "PRIVATBANK"
-                    </p>
-                    <p class="payment-type__acc-num">
-                      IBAN: UA00 000000 00000 00000000000000
-                    </p>
-                    <button
-                      class="payment-type__copy-btn"
-                      data-clipboard-text="UA00 000000 00000 00000000000000"
-                    >
-                      <img
-                        class="payment-type__copy-icon"
-                        src="images/copy.svg"
-                        alt=""
-                      />
-                      <span class="message">Copied</span>
-                    </button>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </article>
-      </main>
-      <include src="html/sections/footer.html"></include>
-    </div>
-    <script src="js/payment.js" type="module"></script>
-  </body>
+<body>
+  <div data-scroll-container>
+    <include src="html/sections/lines.html"></include>
+    <include src="html/sections/header.html"></include>
+
+    <main>
+      <article class="payment" data-scroll-section>
+        <div class="container">
+          <ul class="payment__links">
+            <li>
+              <a href="" class="payment-btn payment__btn payment__btn--accent">Платіж карткою
+                <svg class="payment-btn__icon" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.75 8.75L20 20" stroke-width="2" stroke-linecap="square" />
+                  <path d="M21.25 8.75V21.25H8.75" stroke-width="2" stroke-linecap="square" />
+                </svg></a>
+            </li>
+            <li>
+              <a href="" class="payment-btn payment__btn payment-btn--accent">Банка MONO
+                <svg class="payment-btn__icon" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.75 8.75L20 20" stroke-width="2" stroke-linecap="square" />
+                  <path d="M21.25 8.75V21.25H8.75" stroke-width="2" stroke-linecap="square" />
+                </svg></a>
+            </li>
+          </ul>
+
+          <h2 class="payment__title">Платежі з-за кордону та по Україні</h2>
+          <ul class="payment__types-list">
+            <li class="payment__type payment-type">
+              <h3 class="payment-type__title">Перекази по Україні</h3>
+              <div class="payment-type__details">
+                <p>Birds of victory</p>
+                <p>ЄДРПОУ 00000000</p>
+                <p>Призначення платежу «Благодійна допомога»</p>
+              </div>
+              <ul class="payment-type__accounts-list">
+                <li class="payment-type__account">
+                  <p class="payment-type__currency">Гривня</p>
+                  <p class="payment-type__acc-num">
+                    UA00 000000 00000 00000000000000
+                  </p>
+                  <button class="payment-type__copy-btn" data-clipboard-text="UA00 000000 00000 00000000000000">
+                    <img class="payment-type__copy-icon" src="images/copy.svg" alt="" />
+                    <span class="message">Copied</span>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li class="payment__type payment-type">
+              <h3 class="payment-type__title">Перекази з-за кордону</h3>
+              <ul class="payment-type__accounts-list">
+                <li class="payment-type__account">
+                  <p class="payment-type__currency">
+                    SWIFT in US dollars (USD)
+                  </p>
+                  <p class="payment-type__beneficiar">
+                    BENEFICIARY: JSC CB "PRIVATBANK"
+                  </p>
+                  <p class="payment-type__acc-num">
+                    IBAN: UA00 000000 00000 00000000000000
+                  </p>
+                  <button class="payment-type__copy-btn" data-clipboard-text="UA00 000000 00000 00000000000000">
+                    <img class="payment-type__copy-icon" src="images/copy.svg" alt="" /><span
+                      class="message">Copied</span>
+                  </button>
+                </li>
+                <li class="payment-type__account">
+                  <p class="payment-type__currency">SWIFT in euros (EUR)</p>
+                  <p class="payment-type__beneficiar">
+                    BENEFICIARY: JSC CB "PRIVATBANK"
+                  </p>
+                  <p class="payment-type__acc-num">
+                    IBAN: UA00 000000 00000 00000000000000
+                  </p>
+                  <button class="payment-type__copy-btn" data-clipboard-text="UA00 000000 00000 00000000000000">
+                    <img class="payment-type__copy-icon" src="images/copy.svg" alt="" />
+                    <span class="message">Copied</span>
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </main>
+    <include src="html/sections/footer.html"></include>
+  </div>
+  <script src="js/payment.js" type="module"></script>
+</body>
+
 </html>

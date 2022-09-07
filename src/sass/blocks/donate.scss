@@ -47,6 +47,15 @@
     }
   }
 }
+
+@media (min-width: $md) {
+  .donate {
+    &__title {
+      font-size: 40px;
+    }
+  }
+}
+
 @media (min-width: $xl) {
   .donate {
     padding: 0;
@@ -71,6 +80,7 @@
     }
     &__title {
       margin-bottom: 10px;
+      font-size: 60px;
     }
     &__text {
       margin-bottom: 35px;
