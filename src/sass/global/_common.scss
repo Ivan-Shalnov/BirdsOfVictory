@@ -17,7 +17,6 @@ body {
   font-family: 'HelveticaNeueCyr';
   color: $black;
   padding-top: 70px;
-  scroll-behavior: smooth;
   @media (min-width: 768px) {
     padding-top: 80px;
   }
@@ -25,4 +24,12 @@ body {
 
 main {
   position: relative;
+}
+
+.has-scroll-smooth {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
