@@ -1,3 +1,22 @@
+import LocomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/src/locomotive-scroll.scss';
+
+window.addEventListener('DOMContentLoaded', () => {
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+    smoothMobile: true,
+  });
+
+  // SCROLL EVENTS
+  scroll.on('call', event => {
+    if (event === 'stat-section-inview')
+      countersInts.forEach(counter => counter.start());
+  });
+  // SCROLL EVENTS
+  scroll.update();
+});
+
 // import Swiper JS
 import Swiper, { Navigation } from 'swiper';
 
