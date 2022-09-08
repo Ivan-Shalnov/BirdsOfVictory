@@ -15,13 +15,14 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /BirdsOfVictory/",
+    "build": "parcel build src/*.html --public-url /dist/",
     "prod": "parcel build src/*.html"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.7.0",
     "parcel": "^2.7.0",
     "parcel-packager-svg-sprite": "^2.0.0",
+    "parcel-plugin-structurize": "^2.4.4",
     "parcel-reporter-clean-dist": "^1.0.4",
     "parcel-transformer-svg-sprite": "^2.0.0",
     "posthtml-include": "^1.7.4"
